@@ -125,7 +125,7 @@ Frameworks como [“mockito”](http://site.mockito.org/) e [“jmock”](http:/
 
 Esta é uma segregação importante, pois o teste unitário não pode e não deve depender de comportamento real de outros módulos. Deve ser possível executar e re-executar o teste unitário sem envolver outras partes do software. 
 
-Segregação de objetivos
+## Segregação de objetivos
 
 Podemos segregar os testes por objetivo: 
 

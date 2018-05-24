@@ -16,5 +16,10 @@ Uma verdadeira *dor de cabeça* para qualquer equipe de software, certo? Seja el
 
 Clique no link: [**Falando sobre: Gestão de configuração**](./gestao_configuracao)
 
+# Falando sobre: Testes
+
+Testes são parte do produto de software, pagos pelo Cliente e a ele devem ser entregues.
+
+Clique no link: [**Falando sobre: Testes**](./testes)
 
 

@@ -10,6 +10,12 @@ Para comemorar este marco em minha carreira, resolvi reunir meus melhores artigo
 
 Saca só o conteúdo: 
 
+# Falando sobre: Gestão de Tempo
+
+Das 3 restrições básicas de um projeto (3 + 1): Escopo, Tempo e Custo (+ Qualidade), há uma que tem maior impacto em todas as outras: Tempo (ou prazo). Vejamos algumas ideias baseadas na experiência. Coisas que deram certo, coisas que deram (e dão) errado etc. 
+
+Clique [**AQUI**](./gestao_tempo)
+
 # Falando sobre: Gestão de configuração
 
 Uma verdadeira *dor de cabeça* para qualquer equipe de software, certo? Seja ela ágil ou iterativa, gerir *mudanças* concomitantes no software requer disciplina e controle, e vou mostrar um pouco disto aqui. Ah, e no final, tem um tutorialzinho de **Git**.

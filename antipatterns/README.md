@@ -39,17 +39,17 @@ enharia de Software** em prol de mecanismos subjetivos e heterodoxos.
 Até mesmo boas soluções podem se transformar em “antipatterns”, devido a inabilidade da equipe em aplicá-la. Só para ilustrar, temos o ditado de *Robert Anthony*:
 
 
-```
-Se você encontrar uma boa solução, e ficar muito ligado a ela, a solução se tornará o seu próximo problema.
+
+*Se você encontrar uma boa solução, e ficar muito ligado a ela, a solução se tornará o seu próximo problema.*
     
 - Robert Anthony.
-```
+
 
 É fácil identificar quando um “antipattern” está sendo aplicado por uma equipe. Basta começar a questionar a motivação ou a justificativa para seu uso, e começaremos a receber vários argumentos carregados de emoção e subjetividade. 
 
 Existe uma grande lista de “antipatterns” em um catálogo, que pode ser acessado em: 
 
-http://c2.com/cgi/wiki?AntiPatternsCatalog
+[c2.com](http://c2.com/cgi/wiki?AntiPatternsCatalog)
 
 ## Como evitar “antipatterns”? 
 

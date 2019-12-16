@@ -10,6 +10,12 @@ Para comemorar este marco em minha carreira, resolvi reunir meus melhores artigo
 
 Saca só o conteúdo: 
 
+# Falando sobre: Antipatterns!
+
+**Aqui há monstros!** Veja a influência dos anti-padrões nos projetos de software!
+
+Clique [**AQUI**](./antipatterns)
+
 # Falando sobre: Gestão de Tempo
 
 Das 3 restrições básicas de um projeto (3 + 1): Escopo, Tempo e Custo (+ Qualidade), há uma que tem maior impacto em todas as outras: Tempo (ou prazo). Vejamos algumas ideias baseadas na experiência. Coisas que deram certo, coisas que deram (e dão) errado etc. 

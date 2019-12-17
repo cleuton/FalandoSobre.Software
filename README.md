@@ -10,6 +10,12 @@ Para comemorar este marco em minha carreira, resolvi reunir meus melhores artigo
 
 Saca só o conteúdo: 
 
+# Falando sobre: Erros catastróficos - Por que acontecem?
+
+Sim, apesar de você tomar todo cuidado, e empregar todas as boas práticas, métodos e ferramentas, o resultado pode ser muito ruim, configurando o efeito **guacamole de jiló** e gerando erros catastróficos. 
+
+Veja [**AQUI**](./porqueissoacontece).
+
 # Falando sobre: Antipatterns!
 
 **Aqui há monstros!** Veja a influência dos anti-padrões nos projetos de software!

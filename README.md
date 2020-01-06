@@ -10,6 +10,12 @@ Para comemorar este marco em minha carreira, resolvi reunir meus melhores artigo
 
 Saca só o conteúdo: 
 
+# Falando sobre: Arquitetura flexível
+
+Arquitetura flexível é o que aumenta o **ROI** de projetos de software, permitindo que ele se adapte a novos requisitos e necessidades de negócio. Veja como fazer isso!
+
+Veja [**AQUI**](./arquiteturaflexivel).
+
 # Falando sobre: Erros catastróficos - Por que acontecem?
 
 Sim, apesar de você tomar todo cuidado, e empregar todas as boas práticas, métodos e ferramentas, o resultado pode ser muito ruim, configurando o efeito **guacamole de jiló** e gerando erros catastróficos. 

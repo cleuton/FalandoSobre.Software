@@ -9,7 +9,7 @@
 
 ![](./flexivel.jpg)
 
-*Russian rhythmic gymnast Irina Chaschina stretching. This is an example of an oversplit, or a split that exceeds 180 degrees (Mollerjoakim - Wikimedia)*
+*Caroline Zhang faz uma espiral no evento 2008 Skate Canada International. 30/11/2008, autor: Caroline Paré, publicado em Wikimedia*
 
 O que significa software **flexível**? De acordo com **Anders Karlsen**, em seu artigo na [**Medium**](https://medium.com/faun/flexibility-a-software-architecture-principle-6eafe045a1d4):
 

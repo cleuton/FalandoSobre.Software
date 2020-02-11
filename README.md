@@ -4,6 +4,8 @@
 
 (c) 2018 [**Cleuton Sampaio**](https://github.com/cleuton).
 
+[![](./banner_livros2.png)](https://www.lcm.com.br/site/#livros/busca?term=cleuton)
+
 Mais de 40 anos de experiência em desenvolvimento de software devem valer alguma coisa, não? É mais do que muitas empresas grandes por aí...
 
 Para comemorar este marco em minha carreira, resolvi reunir meus melhores artigos sobre projeto e engenharia de software aqui, voltados para: **Desenvolvedores**, **Gestores de projetos** e **Empreendedores**, sem viés excessivamente técnico (o que eu posto no [**Bom Programador**](http://www.obomprogramador.com)). O enfoque é em **gestão** e **projeto de software**.

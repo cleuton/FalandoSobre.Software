@@ -12,6 +12,12 @@ Para comemorar este marco em minha carreira, resolvi reunir meus melhores artigo
 
 Saca só o conteúdo: 
 
+# Governança de requisitos
+
+Sim! O nome parece uma combinação de caôs dos anos 90, mas é uma prática eficaz contra muitos problemas, especialmente em um ambiente de TI em evolução.
+
+Veja [**AQUI**](./governanca-req)
+
 # Falando sobre: Arquitetura flexível
 
 Arquitetura flexível é o que aumenta o **ROI** de projetos de software, permitindo que ele se adapte a novos requisitos e necessidades de negócio. Veja como fazer isso!

@@ -12,6 +12,12 @@ Para comemorar este marco em minha carreira, resolvi reunir meus melhores artigo
 
 Saca só o conteúdo: 
 
+# Gestão de configuração de software sem traumas
+
+Um dos maiores problemas do moderno desenvolvimento de **software**, a **GCS** é frequentemente negligenciada, trazendo consequências terríveis para o **projeto**
+
+Veja [**AQUI**](./gcs/README.md)
+
 # Governança de requisitos
 
 Sim! O nome parece uma combinação de caôs dos anos 90, mas é uma prática eficaz contra muitos problemas, especialmente em um ambiente de TI em evolução.

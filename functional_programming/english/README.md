@@ -157,16 +157,20 @@ public class AppMoreFunctional {
 Ok ... it looks weird and more difficult to understand than the first version, full of loops. But you need to open your mind to new possibilities and start thinking about function pipelines, instead of loops and "ifs".
 But let's look at the expression calmly and you will see that it is quite simple:
 1. We transformed the vector from "int" into a "set", just as we did in the second example:
+```
 IntStream.of (b) .boxed (). Collect (Collectors.toSet ())
+```
 
 2. We eliminate duplication, then we generate a stream with the elements of this "set":
-.stream () 
+```.stream ()```
 
 3. We filter the elements of the "set" that are contained in the other set. We will explain the transformation in the next step:
-.filter(...)
+```.filter(...)```
 
 4. We transform the other vector into a "set", eliminating duplicates with "collect ()", and operate on this "set" with the "contains ()" method. The double colon syntax means a reference to the method of the "set" class:
-IntStream.of (a) .boxed (). Collect (Collectors.toSet ()) :: contains
+```
+IntStream.of(a).boxed().Collect(Collectors.toSet())::contains
+```
 
 We are filtering out the elements of "b" that are contained in "a".
 

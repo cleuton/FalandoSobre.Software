@@ -113,12 +113,11 @@ public class AppFunctional {
 Hummmm ... But you are still generating side effects, as there is a variable (setB) being changed outside the function.
 In fact, you are right. The expression: "setB.retainAll (setA)" is changing an external variable. This "retainAll ()" function is not a Pure Function:
 
-```
-In computer programming, a pure function is a function that has the following properties:
-    1. The function return values are identical for identical arguments (no variation with local static variables, non-local variables, mutable reference arguments or input streams).
-    2. The function application has no side effects (no mutation of local static variables, non-local variables, mutable reference arguments or input/output streams).
-(Wikipedia)
-```
+> In computer programming, a pure function is a function that has the following properties:
+> 1. The function return values are identical for identical arguments (no variation with local static variables, non-local variables, mutable reference arguments or input streams).
+> 2. The function application has no side effects (no mutation of local static variables, non-local variables, mutable reference arguments or input/output streams).
+> (Wikipedia)
+
 
 When transforming the vectors into Sets, we automatically eliminate duplicates. We use the new class "IntStream" to generate a stream of primitive values "int", on it, we invoke the "boxed ()" method to encapsulate the primitives in instances of "Integer", in order to generate a "Set" through the "collect ()" and using the "Collector toSet". Collect will make a mutable reduction in the object, transforming it element by element.
 

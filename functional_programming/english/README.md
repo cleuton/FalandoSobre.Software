@@ -63,7 +63,9 @@ The given test code is:
 
 Your code passed the test, returning: [7,8,20].
 And they asked you, "Can this code be improved?"
-Complexity
+
+
+## Complexity
 
 No doubt your code works! As a first approach, in a Test driven development process, it looks great. But what about complexity? Let's start with Cyclomatic Complexity: 7
 

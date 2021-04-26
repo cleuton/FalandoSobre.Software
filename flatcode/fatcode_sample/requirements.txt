@@ -1,0 +1,4 @@
+flask
+Flask-HTTPAuth
+pyyaml
+rsa

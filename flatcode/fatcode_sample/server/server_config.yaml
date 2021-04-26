@@ -1,0 +1,5 @@
+port: 8080
+strategy: a
+max_threads: 10
+logfile: ./log.log
+loglevel: 10

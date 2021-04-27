@@ -64,7 +64,7 @@ And, anyway, frameworks are designed to entangle your software in a web that is 
 
 The question is: *Can we develop software without using any framework?*
 
-Due to the diversity of platforms and the need for interoperability, probably not. But it is possible to reduce the dependence on these frameworks, isolate the code that uses them to avoid its propagation.
+Due to the diversity of platforms and the need for interoperability, probably not. But it is possible to reduce the dependence on these frameworks by isolating the code that uses them to avoid its propagation.
 
 ## Aspects must be externalized
 

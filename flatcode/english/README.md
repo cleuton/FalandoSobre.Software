@@ -51,20 +51,20 @@ I wrote an article on Hackernoon detailing this issue of accidental complexity, 
 
 ## Dealing with complexity
 
-There are basically two ways to deal with software complexity: Indirection, which means adding layers of abstraction, and decomposition, which means breaking down the problem into smaller parts. Although there are at least two ways, I have the impression that most developers prefer Indirection as a solution. Create layers and layers of abstraction, whether using design patterns or not.
+There are basically two ways to deal with software complexity: Indirection, which means adding layers of abstraction, and decomposition, which means breaking down the problem into smaller parts. Although there are at least two ways, I have the impression that most developers prefer Indirection as a solution. Creating layers and layers of abstraction, whether using design patterns or not.
 
 ![](../images/complexity.jpg)
 
 ## Frameworks: Spider webs that bind you, the software and the company together
 
-I have a certain dislike for frameworks, I believe that, in most cases, they add less value than accidental complexity to the code. And, to make matters worse, many frameworks have an aggressive roadmap, with destructive versions in most cases and you are forced to migrate or settle for an old version.
+I have a certain dislike for frameworks, I believe that, in most cases, they add less value than accidental complexity to the code. And, to make matters worse, many frameworks have an aggressive roadmap, with destructive upgrades in most cases, and you are forced to upgrade or settle for an old version.
 And, anyway, frameworks are designed to entangle your software in a web that is difficult to break. I usually say this:
 
 > Frameworks are solutions that you don't need, for problems that you don't have.
 
 The question is: *Can we develop software without using any framework?*
 
-Due to the diversity of platforms and the need for interoperability, probably not. But it is possible to reduce the dependence on these frameworks, compartmentalizing the code to avoid its propagation.
+Due to the diversity of platforms and the need for interoperability, probably not. But it is possible to reduce the dependence on these frameworks, isolate the code that uses them to avoid its propagation.
 
 ## Aspects must be externalized
 
@@ -81,15 +81,15 @@ With modern infrastructure resources, such as: Containers, Orchestrators and Faa
 
 ![](../images/gorilla-2869704_1280.jpg)
 
-Ok. Let's show you a very simple example, to demonstrate how we introduce extra dimensions in the source code, without real need. Usually this process starts with reading the user's story, because instead of thinking about understanding the problem to give a solution, we actually think about how to solve the problem using our "arsenal" of preferred tools.
+Ok. Let's show you a very simple example, to demonstrate how we introduce extra dimensions in the source code, without real need. Usually this process starts with the user's story, because instead of thinking about understanding the problem to give a solution, we actually think about how to solve the problem using our "arsenal" of preferred tools and solutions.
 
 Let's assume that the user passed the following report to the team:
 
-> We need a module that returns the value of a parameter to the Customer. The number provided is the term number of the progression given by the formula:
+> We need a module that returns the value of a parameter to the Customer. The provided parameter is the term number of the progression given by the formula:
 > F1 = 1, F2 = 1
 > Fn = Fn-1 + Fn-2
-> Depending on the number passed, the calculation takes a long time and this cannot happen.
-> The term number is the character size of the user name. To limit, we are between 2 and 15 characters. If it is outside this range, use the value 5.
+> Depending on the parameter, the calculation takes a long time and this cannot happen.
+> The term number (parameter) is the character size of the user name. To limit the time spent, we accept between 2 and 15 characters. If the parameter is outside this range, use the value 5.
 > An important point is that today we use this function, but this may change in the future.
 > Many users will access this module simultaneously. It will be integrated into the existing web application today.
 
@@ -139,7 +139,7 @@ What about scalability and high availability? Each request can have a variable p
 
 Am I exaggerating? Would this hypothetical discussion among developers ever happen? Well, I followed some groups of students implementing this exercise and the discussions went more or less that way.
 
-You can see the example implemented in the folder [**fatcode_sample**](../fatcode_sample) Now, let's look at some of the solutions adopted by the developers to solve the problem raised in the story.
+You can see the implemented code in the folder [**fatcode_sample**](../fatcode_sample) Now, let's look at some of the solutions adopted by the developers to solve the problem raised in the story.
 
 ### Structural dimension
 
@@ -166,7 +166,7 @@ class AbstractStrategy(ABC):
         pass
 ```
 
-In the business/factories/concrete folder we have the concrete strategy class:
+In the business/concrete folder we have the concrete strategy class:
 
 ```
 from business.abstract_strategy import AbstractStrategy
@@ -229,7 +229,7 @@ def start_calc (factory: AbstractFactory, name, poolx):
 
 As it was decided to use the Flask framework to create a RESTful service, we have the framework code interspersed with the application code inside the file "servidor.py". Although it is reasonably separate, it is still a concern for the developer. 
 
-The code involved with the framework is also making business decisions and invoking specific functions.The code involved with the framework is also making business decisions and invoking specific functions.
+The code involved with the framework is also making business decisions and invoking specific functions.
 
 ### orthogonal dimension
 
@@ -251,7 +251,7 @@ def ask_token():
     return json.dumps(result)
 ```
 
-It was decided to use the flask_httpauth framework to deal with the source code authentication and authorization problem. In this first version, they embed users in the application, but later they will migrate to the same database that controls the security of the Web application. They will receive an Authorization Header for the application that contains the user currently logged in.It was decided to use the flask_httpauth framework to deal with the source code authentication and authorization problem. In this first version, they embed users in the application, but later they will migrate to the same database that controls the security of the Web application. They will receive an Authorization Header for the application that contains the user currently logged in.
+It was decided to use the flask_httpauth framework to deal with the source code authentication and authorization problem. In this first version, they embed users in the application, but later they will migrate to the same database that controls the security of the Web application. They will receive an Authorization Header for the application that contains the user currently logged in.It was decided to use the flask_httpauth framework to deal with the source code authentication and authorization problem. 
 
 Another aspect that was of concern was scalability. Since the calculation could take a long time, they decided to implement a thread pool to handle the calculations. This can be seen in the "server.py" and in "business_layer.py":
 
@@ -347,7 +347,7 @@ Let's start with the answers to the two questions that few developers asked:
 
 The first (and most obvious) question makes perfect sense and can greatly simplify the task. If the calculation has finite and deterministic states, that is, given the same inputs, we will return the same output, and considering that the range of possible numbers is reduced (2 to 15), wouldn't it make more sense to put this in physical storage?
 
-Let's assume that the user replied that this calculation was going to change in the future and the user does not want to put it on a disk file.
+Let's assume that the user replied that this calculation was going to change in the future and the user does not want to write it to a file on disk.
 
 And the second question makes as much sense as the first. What is the maximum tolerable response time? Without knowing this, how can we think about scalability? He replied that it should take less than 1 second.
 
@@ -361,7 +361,7 @@ def execute(x):
     return fibonacci(x)
 ```
 
-As the French like to say: "c'est fini"! I created a testcase with all possible values and still noted the execution time in seconds:
+As the French like to say: "c'est fini"! I created some testcases with all possible values and still noted the execution time in seconds:
 
 ```
 from lib import calc_lib

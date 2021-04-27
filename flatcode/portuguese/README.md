@@ -7,9 +7,9 @@
 ![](../images/flatcode.jpg)
 
 Flat Code é uma nova forma de construir software, mais produtiva e objetiva:
-- **Focado**: O código-fonte deve se preocupar apenas com a função principal. Aspectos como: Segurança, escalabilidade e alta disponibilidade, devem ser deixados para a Infraestrutura de TI;
+- **Focado** (Focused): O código-fonte deve se preocupar apenas com a função principal. Aspectos como: Segurança, escalabilidade e alta disponibilidade, devem ser deixados para a Infraestrutura de TI;
 - **Simples**: Sem estruturas de classe ou padrões complexos. O ideal é criar o código mais simples possível, afinal ele deve ser descartável e facilmente substituível;
-- **Responsabilidade única**: O código deve ter uma e apenas uma função;
+- **Responsabilidade única** (Single responsability): O código deve ter uma e apenas uma função;
 - **Funcional**: Deve-se construir o código encadeando funções puras, evitando loops, "ifs" e efeitos colaterais, reduzindo a complexidade do código;
 - **Cloud native**: Construa seu código como serviços desacoplados, seguindo os princípios de Função como Serviço, tornando simples servir com mecanismos como nuvens ou containers;
 - **Plugável (Pluggable)**: O código deve ter interface simples, reduzida (ISP) e óbvia (POLA), utilizando mecanismos e protocolos padrão para interoperabilidade;
@@ -94,9 +94,9 @@ Vamos supor que o usuário tenha passado o seguinte relatório para a equipe:
 > Um ponto importante é que hoje usamos esta função, mas isso pode mudar no futuro.
 > Muitos usuários acessarão este módulo simultaneamente. Ele será integrado ao aplicativo da web existente hoje.
 
-* (Sim ... É o termo função da sequência de Fibonacci, mas vamos ignorá-lo por enquanto. Vamos fingir que é qualquer função) *
+*(Sim ... É o termo função da sequência de Fibonacci, mas vamos ignorá-lo por enquanto. Vamos fingir que é qualquer função)*
 
-** Se você pudesse perguntar algo ao usuário, o que seria? **
+**Se você pudesse perguntar algo ao usuário, o que seria?**
 
 Esse requisito fazia parte de uma aula que passei aos meus alunos. Sempre pedi para listar essas questões. Aproveitei para passar este texto a alguns desenvolvedores profissionais e, para minha surpresa, eles fizeram as mesmas perguntas:
 
@@ -105,7 +105,7 @@ Esse requisito fazia parte de uma aula que passei aos meus alunos. Sempre pedi p
 - Podemos implementá-lo como uma solicitação assíncrona?
 
 Depois de apresentar este caso a algumas centenas de pessoas, entre alunos e colegas, apenas alguns fizeram as perguntas realmente relevantes:
-- Esta função se parece com uma máquina de estados finitos determinístos, uma vez que sempre retorna o mesmo resultado para a mesma entrada. Podemos substituí-lo por uma tabela de banco de dados ou algo semelhante?
+- Esta função se parece com uma máquina de estados finitos determinísticos, uma vez que sempre retorna o mesmo resultado para a mesma entrada. Podemos substituí-lo por uma tabela de banco de dados ou algo semelhante?
 - Qual seria o tempo máximo de resposta tolerável?
 
 Pretendo mostrar como os alunos (e alguns desenvolvedores) implementaram essa história, então irei considerar neste ponto apenas as 3 perguntas mais comuns e possíveis respostas do usuário:
@@ -140,7 +140,7 @@ E quanto à escalabilidade e alta disponibilidade? Cada solicitação pode ter u
 
 Estou exagerando? Essa discussão hipotética entre os desenvolvedores aconteceria? Bem, acompanhei alguns grupos de alunos implementando este exercício e as discussões foram mais ou menos assim.
 
-Você pode ver o exemplo implementado na pasta [**fatcode_sample**](../ fatcode_sample) Agora, vamos dar uma olhada em algumas das soluções adotadas pelos desenvolvedores para resolver o problema levantado na história.
+Você pode ver o exemplo implementado na pasta [**fatcode_sample**](../fatcode_sample) Agora, vamos dar uma olhada em algumas das soluções adotadas pelos desenvolvedores para resolver o problema levantado na história.
 
 ### Dimensão estrutural
 
@@ -167,7 +167,7 @@ class AbstractStrategy(ABC):
         pass
 ```
 
-Na pasta de business/factories/concrete, temos a classe de estratégia concreta:
+Na pasta de business/concrete, temos a classe de estratégia concreta:
 
 ```
 from business.abstract_strategy import AbstractStrategy
@@ -232,7 +232,7 @@ Como foi decidido utilizar o framework Flask para criar um serviço RESTful, tem
 
 O código envolvido com a estrutura também toma decisões de negócios e invoca funções específicas.
 
-### dimensão ortogonal
+### Dimensão ortogonal
 
 Houve uma grande preocupação aqui. Temos a parte de segurança, que pode ser vista no "servidor.py":
 
@@ -329,7 +329,7 @@ Devido à sua complexidade, o código foi testado manualmente, usando o Insomnia
 
 ![](../images/post.png)
 
-And here we see a GET request to get results:
+E aqui temos um request GET para obter o resultado:
 
 ![](../images/get.png)
 
@@ -445,7 +445,7 @@ if __name__ == '__main__':
 
 Em vez de invocar um serviço RESTful, o código do aplicativo cliente simplesmente colocaria uma mensagem em uma fila e ouviria outra.
 
-Assim, a questão da escalabilidade está resolvida. E sobre segurança, RabbitMQ suporta outros mecanismos de autorização, como: LDAP ou HTTP. Simplesmente, tudo isso pode ser deixado para Devops para implementação por meio da infraestrutura de TI.
+Assim, a questão da escalabilidade está resolvida. E sobre segurança, RabbitMQ suporta outros mecanismos de autorização, como: LDAP ou HTTP. Simplesmente, tudo isso pode ser deixado para os Devops resolverem por meio da infraestrutura de TI.
 
 # Conclusão
 

@@ -1,0 +1,14 @@
+*** Compilar a imagem: 
+sudo docker build -t node-git-antes:1.0.0 .
+
+*** Subir um Contêiner: 
+sudo docker run --name testegit -it -d node-git-antes:1.0.0
+
+*** Entrar no shell do contêiner:
+sudo docker exec -it testegit bash
+
+*** Sair do shell do contêiner: 
+exit
+
+*** Remover todos os contêineres criados: 
+sudo docker rm -f $(sudo docker ps -a -q)
